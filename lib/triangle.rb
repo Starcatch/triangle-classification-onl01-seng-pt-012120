@@ -14,7 +14,7 @@ class Triangle
     begin
       raise TriangleError
        puts error.message
-       end 
+    end 
     
     elsif side1 == side2 && side1 == side3
       self.kind = :equilateral
@@ -33,4 +33,6 @@ end
    def message
    puts "not a trianle"
   end 
+ end
+ 
  end
