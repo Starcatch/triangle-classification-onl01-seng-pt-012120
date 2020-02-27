@@ -22,10 +22,10 @@ class Triangle
    elsif side1 == side2 || side1 == side3 || side2 == side3
   self.kind = :isosceles
   
-  elsif side1 == side2 || side1 == side3 || side2 == side3
+ else
   self.kind = :scalene
     
-    end
+  end
  end 
  
  class TriangleError < StandardError
