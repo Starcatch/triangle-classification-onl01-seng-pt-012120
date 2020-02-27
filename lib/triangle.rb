@@ -33,8 +33,7 @@ class TriangleError < StandardError
 end 
 =end 
 
-class TriangleError < Exception 
-end
+
 
 class Triangle 
 
@@ -64,5 +63,6 @@ class Triangle
     return :isosceles if self.a == self.b || self.a == self.c || self.b == self.c
     :scalene
   end
-
+class TriangleError < Exception 
+end
 end
