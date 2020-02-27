@@ -22,8 +22,8 @@ class Triangle
    elsif side1 == side2 || side1 == side3 || side2 == side3
   self.kind = :isosceles
   
- else
-  self.kind = :scalene
+   else
+    self.kind = :scalene
     
   end
  end 
