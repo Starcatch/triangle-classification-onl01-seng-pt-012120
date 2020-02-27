@@ -11,8 +11,9 @@ class Triangle
  def kind
    if (side1 * side2 * side3) == 0 || (side1 + side2) <= side3 || (side2 + side3) <= side1 || (side3 + side1) <= side2
     
+    begin
       raise TriangleError
-      
+    end 
     elsif s1
     
     end
