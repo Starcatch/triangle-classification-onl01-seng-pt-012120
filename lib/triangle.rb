@@ -1,6 +1,6 @@
 class Triangle
  	
- attr_accessor :side1, :side2, :side3
+ attr_reader :side1, :side2, :side3
  
  def initialize(side1, side2, side3)
     @side1 = side1
@@ -13,14 +13,14 @@ class Triangle
     
     begin
       raise TriangleError
-      puts error.message
-    end 
+       puts error.message
+       end 
     
-  elsif side1 == side2 && side1 == side3
-  self.kind = :equilateral
+    elsif side1 == side2 && side1 == side3
+      self.kind = :equilateral
   
-   elsif side1 == side2 || side1 == side3 || side2 == side3
-  self.kind = :isosceles
+    elsif side1 == side2 || side1 == side3 || side2 == side3
+      self.kind = :isosceles
   
    else
     self.kind = :scalene
