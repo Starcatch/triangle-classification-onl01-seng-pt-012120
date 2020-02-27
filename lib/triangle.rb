@@ -16,7 +16,7 @@ class Triangle
       puts error.message
     end 
     
-  elsif s1
+  elsif side1 == side2 == side3
     
     end
  end 
