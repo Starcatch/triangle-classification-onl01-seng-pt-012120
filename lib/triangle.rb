@@ -33,3 +33,36 @@ class TriangleError < StandardError
 end 
 =end 
 
+class TriangleError < Exception 
+end
+
+class Triangle 
+
+  attr_accessor :kind, :a, :b, :c
+
+  def initialize(a, b, c) 
+    raise TriangleError if invalid_triangle?(a, b, c)
+    @a = a
+    @b = b
+    @c = c
+  end
+
+  def invalid_triangle?(a,b,c)
+    zero_or_less?(a,b,c) || sides_are_off?(a,b,c)
+  end
+
+  def zero_or_less?(a,b,c)
+    [a,b,c].any? {|x| x<= 0}
+  end
+
+  def sides_are_off?(a,b,c)
+    (a + b <= c) || (b + c <= a) || (a + c <= b)
+  end
+
+  def kind
+    return :equilateral if self.a == self.b && self.b == self.c
+    return :isosceles if self.a == self.b || self.a == self.c || self.b == self.c
+    :scalene
+  end
+
+end
