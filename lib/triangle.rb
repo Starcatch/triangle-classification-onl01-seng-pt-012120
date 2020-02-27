@@ -16,7 +16,8 @@ class Triangle
       puts error.message
     end 
     
-  elsif side1 == side2 == side3
+  elsif side1 == side2 && side1 == side3
+  self.kind
     
     end
  end 
