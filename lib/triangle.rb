@@ -34,4 +34,3 @@ end
    puts "not a trianle"
   end 
  end
- end 
